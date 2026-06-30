@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 // here we show what data type of the data our note contains
 const noteSchema = new mongoose.Schema({
     title : String,
-    description:string 
+    description:String
 })
 
 const noteModel = mongoose.model("note",noteSchema);
