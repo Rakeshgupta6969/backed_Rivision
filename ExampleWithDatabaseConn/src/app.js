@@ -67,7 +67,7 @@ app.patch("/notes/:id",async (req,res) =>{
     },
     {
      description:description
-    })
+    }) 
     res.status(200).json({
         message: "notes with the given id is updated successfully"
     })
