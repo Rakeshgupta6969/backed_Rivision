@@ -1,14 +1,22 @@
 import React, { useState} from "react";
 import { useEffect } from "react";
+import axios from "axios";
 
 const Feed = () => {
   const [posts] = useState([
     {
-      _id: 1,
+      _id: "1",
       image: "https://wallpapercave.com/wp/zX0nedR.jpg",
       caption: "This is a beautiful image",
     },
   ]);
+
+  useEffect(() => {
+     axios.get("http://localhost:3000/createPost")
+     .then((res) =>{
+      console.log(res.data);
+     })
+  },[]);
 
   return (
     <section className="min-h-screen bg-gray-100 py-10 px-4">
